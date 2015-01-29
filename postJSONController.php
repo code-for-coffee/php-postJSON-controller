@@ -7,9 +7,6 @@
 
 /**
  * Class postJSONController
- * onError() is to be implemented
- * onSuccess() is to be implemented
- * OnPost() reads the $jsonResult passed in and delegates to above functions
  */
 abstract class postJSONController {
 
@@ -21,10 +18,14 @@ abstract class postJSONController {
     public function isJsonValid($jsonObj){
 
         try {
+
             $obj = strip_tags($jsonObj);
             $obj = json_decode($obj);
+
         } catch (ErrorException $ex) {
+
             return false;
+
         }
 
         return true;
@@ -33,10 +34,14 @@ abstract class postJSONController {
     public function toJson($jsonObj){
 
         try {
+
             $obj = strip_tags($jsonObj);
             $obj = json_decode($obj);
+
         } catch (ErrorException $ex) {
+
             throw new ErrorException($ex);
+
         }
 
         return $obj;

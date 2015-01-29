@@ -5,6 +5,9 @@
  * Time: 11:48 PM
  */
 
+/**
+ * Class emailFormSubmission
+ */
 class emailFormSubmission extends postJSONController {
 
     public function onError($email)
