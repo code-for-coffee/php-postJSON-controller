@@ -10,10 +10,8 @@
  */
 abstract class postJSONController {
 
-    public $actionObject = null;
-
-    abstract public function onError($object);
-    abstract public function onSuccess($args, $actionObject);
+    abstract public function onError();
+    abstract public function onSuccess($args);
 
     public function isJsonValid($jsonObj){
 
