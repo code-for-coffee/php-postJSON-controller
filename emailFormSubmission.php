@@ -7,11 +7,11 @@
 
 class emailFormSubmission extends postJSONController {
 
-    public function onError($args)
+    public function onError($email)
     {
 
     }
-    public function onSuccess($args)
+    public function onSuccess($args, $email)
     {
 
     }
