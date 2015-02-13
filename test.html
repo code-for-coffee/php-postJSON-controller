@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ajax_controller Test</title>
+
+</head>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+
+    var obj = {
+        "name": "test-file"
+    };
+
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "ajax_controller.php",
+        data: obj,
+        success: function(data) {
+            $('body').html("sucess");
+        },
+        fail: function(error) {
+            $('body').html("error");
+        }
+
+    })
+
+});
+</script>
+
+<body>
+
+</body>
+</html>
