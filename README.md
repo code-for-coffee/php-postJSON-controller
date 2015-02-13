@@ -1,4 +1,4 @@
 # php-postJSON-controller
 Simple controller class that accepts JSON for Ajax methods
 
-this is a work in progress.
+A test.html file is provided as an example on using it with jQuery.
