@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>contact form</title>
+
+</head>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function(){
+
+        var data = {
+            Name: $('#name').val(),
+            Email: $('#email').val(),
+            Comments: $('#comments').val()
+        }
+
+        $("#sendEmail").onclick(function(evt) {
+           evt.preventDefault();
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "ajax_controller.php",
+                data: data,
+                success: function(data) {
+                    $('#status').html("email sent");
+                },
+                fail: function(error) {
+                    $('#status').html("failed to send email");
+                }
+
+            })
+        });
+
+
+
+    });
+</script>
+
+<body>
+
+<input type="text" id="name" placeholder="your name?" />
+<input type="email" id="email" placeholder="youremail@somewhere.net" />
+<input type="text" id="comments" placeholder="Comments?" />
+<input type="submit" id="sendEmail" value="Send email" />
+<div id="status">Status: no email sent yet.</div>
+
+
+</body>
+</html>
