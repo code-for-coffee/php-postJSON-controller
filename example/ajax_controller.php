@@ -30,7 +30,7 @@ function on_valid_ajax_request(){
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-    $body = "You have received a new registration!<br><br> \n\n";
+    $body = "You have received a new comment!<br><br> \n\n";
     $body .= "Name: " . $_POST['Name'] . "<br>\n";
     $body .= "LastName: " . $_POST['Email'] . "<br>\n";
     $body .= "Comments: " . $_POST['Comments'] . "<br>\n";
