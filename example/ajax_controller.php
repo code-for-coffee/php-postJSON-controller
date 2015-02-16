@@ -33,10 +33,9 @@ function on_valid_ajax_request(){
     $body = "You have received a new registration!<br><br> \n\n";
     $body .= "Name: " . $_POST['Name'] . "<br>\n";
     $body .= "LastName: " . $_POST['Email'] . "<br>\n";
-
     $body .= "Comments: " . $_POST['Comments'] . "<br>\n";
 
-    mail($toEmail, "ussessexassociation.com - New Registration", $body, $headers);
+    mail($toEmail, "New Comment", $body, $headers);
 
     echo json_encode($_POST);
 }
